@@ -52,10 +52,9 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal server error' })
 })
 
-// Load persisted data from Supabase before accepting requests
-initStore().then(() => {
-  app.listen(PORT, () => {
-    console.log(`PulsePoint API running on http://localhost:${PORT}`)
-    console.log(`Health: http://localhost:${PORT}/api/health`)
-  })
+// Start listening immediately, then load Supabase data in background
+app.listen(PORT, () => {
+  console.log(`PulsePoint API running on http://localhost:${PORT}`)
+  console.log(`Health: http://localhost:${PORT}/api/health`)
+  initStore().catch(err => console.error('Store init error:', err))
 })
