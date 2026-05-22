@@ -1,0 +1,641 @@
+// ============================================================
+// PULSEPOINT SEED DATA
+// Market: Stamford CT / Lower Fairfield County
+// User org: Stamford Health
+// ============================================================
+
+export const USER_ORG = {
+  id: 'stamford-health',
+  name: 'Stamford Health',
+  type: 'health_system',
+  geography: 'Lower Fairfield County, CT',
+}
+
+// ============================================================
+// COMPETITOR SYSTEMS
+// ============================================================
+export const COMPETITORS = [
+  {
+    id: 'ynhh',
+    name: 'Yale New Haven Health',
+    shortName: 'YNHH',
+    color: '#1D4ED8',
+    bgColor: '#EFF6FF',
+    textColor: '#1D4ED8',
+  },
+  {
+    id: 'hhc',
+    name: 'Hartford HealthCare',
+    shortName: 'HHC',
+    color: '#7C3AED',
+    bgColor: '#F5F3FF',
+    textColor: '#7C3AED',
+  },
+  {
+    id: 'northwell',
+    name: 'Northwell Health',
+    shortName: 'Northwell',
+    color: '#DC2626',
+    bgColor: '#FEF2F2',
+    textColor: '#DC2626',
+  },
+]
+
+// ============================================================
+// INTELLIGENCE ITEMS
+// ============================================================
+export const INTELLIGENCE_ITEMS = [
+  // ---- YNHH ----
+  {
+    id: 'ynhh-1',
+    competitorId: 'ynhh',
+    headline: 'Cardiovascular Institute expansion at Greenwich Hospital — 42,000 sq ft, $85M investment, breaking ground Q3 2026',
+    soWhat: 'Positions YNHH as the premier cardiac destination in lower Fairfield County — assess your cardiovascular service line differentiation now.',
+    source: 'Greenwich Time',
+    sourceUrl: '#',
+    publishedDate: '2026-05-14',
+    serviceLine: 'Cardiology',
+    itemType: 'expansion',
+    geographyLevel: 'local',
+  },
+  {
+    id: 'ynhh-2',
+    competitorId: 'ynhh',
+    headline: 'CON filed for 15-bed oncology expansion at Bridgeport Hospital',
+    soWhat: 'YNHH is doubling down on cancer care in your primary market — monitor approval timeline closely.',
+    source: 'CT OHCA',
+    sourceUrl: '#',
+    publishedDate: '2026-05-08',
+    serviceLine: 'Oncology',
+    itemType: 'regulatory',
+    geographyLevel: 'local',
+  },
+  {
+    id: 'ynhh-3',
+    competitorId: 'ynhh',
+    headline: 'Hospital-at-Home program launched covering New Haven and Fairfield Counties',
+    soWhat: 'YNHH now competes in the home setting — review your post-acute strategy.',
+    source: 'YNHH Press Release',
+    sourceUrl: '#',
+    publishedDate: '2026-04-29',
+    serviceLine: 'Primary Care',
+    itemType: 'care_model',
+    geographyLevel: 'regional',
+  },
+  {
+    id: 'ynhh-4',
+    competitorId: 'ynhh',
+    headline: 'Direct-to-employer contract signed with Synchrony Financial (Stamford HQ)',
+    soWhat: 'YNHH is capturing a major Stamford employer — identify other at-risk employer relationships.',
+    source: 'Hartford Business Journal',
+    sourceUrl: '#',
+    publishedDate: '2026-04-22',
+    serviceLine: 'Payer/Contracting',
+    itemType: 'payer',
+    geographyLevel: 'local',
+  },
+  {
+    id: 'ynhh-5',
+    competitorId: 'ynhh',
+    headline: 'New CMO appointed: Dr. Priya Sharma, MD (from Cleveland Clinic)',
+    soWhat: 'Cleveland Clinic pedigree signals focus on clinical quality benchmarking — expect public quality metric campaigns.',
+    source: 'Modern Healthcare',
+    sourceUrl: '#',
+    publishedDate: '2026-04-15',
+    serviceLine: null,
+    itemType: 'leadership',
+    geographyLevel: 'regional',
+  },
+  {
+    id: 'ynhh-6',
+    competitorId: 'ynhh',
+    headline: 'Acquired Southwest CT Medical Associates (12-provider primary care group, 4 Fairfield County locations)',
+    soWhat: 'YNHH added 12 PCPs in your market — evaluate your primary care referral network gaps.',
+    source: 'CT Mirror',
+    sourceUrl: '#',
+    publishedDate: '2026-04-01',
+    serviceLine: 'Primary Care',
+    itemType: 'acquisition',
+    geographyLevel: 'local',
+  },
+  {
+    id: 'ynhh-7',
+    competitorId: 'ynhh',
+    headline: 'New behavioral health urgent care center opened in Milford',
+    soWhat: 'YNHH is investing in accessible behavioral health entry points — a growing competitive front.',
+    source: 'New Haven Register',
+    sourceUrl: '#',
+    publishedDate: '2026-03-24',
+    serviceLine: 'Behavioral Health',
+    itemType: 'expansion',
+    geographyLevel: 'regional',
+  },
+  {
+    id: 'ynhh-8',
+    competitorId: 'ynhh',
+    headline: 'Partnership with Optum for care management platform integration',
+    soWhat: 'YNHH is building infrastructure for risk contracts — watch for commercial ACO announcements.',
+    source: "Becker's Hospital Review",
+    sourceUrl: '#',
+    publishedDate: '2026-03-10',
+    serviceLine: 'Value-Based Care',
+    itemType: 'technology',
+    geographyLevel: 'regional',
+  },
+
+  // ---- HHC ----
+  {
+    id: 'hhc-1',
+    competitorId: 'hhc',
+    headline: "New cancer center opened at St. Vincent's Medical Center, Bridgeport — $120M facility, proton therapy capable",
+    soWhat: 'HHC now has a destination oncology asset in Fairfield County — significant threat to your oncology referral volume.',
+    source: 'Hartford Courant',
+    sourceUrl: '#',
+    publishedDate: '2026-05-12',
+    serviceLine: 'Oncology',
+    itemType: 'expansion',
+    geographyLevel: 'local',
+  },
+  {
+    id: 'hhc-2',
+    competitorId: 'hhc',
+    headline: 'Acquired Fairfield County Physical Therapy Group (8 locations)',
+    soWhat: 'HHC now controls 8 PT touch points in your geography — review orthopedic care continuum.',
+    source: 'Hartford Business Journal',
+    sourceUrl: '#',
+    publishedDate: '2026-05-05',
+    serviceLine: 'Orthopedics',
+    itemType: 'acquisition',
+    geographyLevel: 'local',
+  },
+  {
+    id: 'hhc-3',
+    competitorId: 'hhc',
+    headline: 'Virtual behavioral health platform launched — covering all CT residents',
+    soWhat: 'HHC is competing on access and convenience in behavioral health — differentiate on acuity and outcomes.',
+    source: 'HHC Press Release',
+    sourceUrl: '#',
+    publishedDate: '2026-04-28',
+    serviceLine: 'Behavioral Health',
+    itemType: 'technology',
+    geographyLevel: 'regional',
+  },
+  {
+    id: 'hhc-4',
+    competitorId: 'hhc',
+    headline: 'New CFO hired: David Reyes (former Mass General Brigham VP Finance)',
+    soWhat: 'MGB finance leadership typically signals financial restructuring and margin improvement programs — watch for service line rationalization.',
+    source: 'Modern Healthcare',
+    sourceUrl: '#',
+    publishedDate: '2026-04-18',
+    serviceLine: null,
+    itemType: 'leadership',
+    geographyLevel: 'regional',
+  },
+  {
+    id: 'hhc-5',
+    competitorId: 'hhc',
+    headline: 'Value-based agreement signed with Anthem Blue Cross CT',
+    soWhat: 'HHC gains preferred positioning in Anthem network — review your Anthem contract terms and performance metrics.',
+    source: "Becker's Payer Issues",
+    sourceUrl: '#',
+    publishedDate: '2026-04-10',
+    serviceLine: 'Payer/Contracting',
+    itemType: 'payer',
+    geographyLevel: 'regional',
+  },
+  {
+    id: 'hhc-6',
+    competitorId: 'hhc',
+    headline: 'Ayer Neuroscience Institute expanding to Fairfield County location (Trumbull)',
+    soWhat: 'HHC is exporting a marquee service line brand into your market — evaluate neurology service positioning.',
+    source: 'HHC Press Release',
+    sourceUrl: '#',
+    publishedDate: '2026-03-31',
+    serviceLine: 'Neurology',
+    itemType: 'expansion',
+    geographyLevel: 'local',
+  },
+  {
+    id: 'hhc-7',
+    competitorId: 'hhc',
+    headline: 'CON filed for 20-bed psychiatric inpatient expansion at Backus Hospital',
+    soWhat: 'HHC anticipates growing inpatient psych demand — consider whether your behavioral health capacity is adequate.',
+    source: 'CT OHCA',
+    sourceUrl: '#',
+    publishedDate: '2026-03-20',
+    serviceLine: 'Behavioral Health',
+    itemType: 'regulatory',
+    geographyLevel: 'regional',
+  },
+  {
+    id: 'hhc-8',
+    competitorId: 'hhc',
+    headline: 'Partnership with Walmart Health for primary care co-location pilot (3 CT sites)',
+    soWhat: 'Retail health is arriving in CT — monitor access and convenience metrics relative to competitors.',
+    source: 'Modern Healthcare',
+    sourceUrl: '#',
+    publishedDate: '2026-03-05',
+    serviceLine: 'Primary Care',
+    itemType: 'partnership',
+    geographyLevel: 'regional',
+  },
+
+  // ---- Northwell ----
+  {
+    id: 'northwell-1',
+    competitorId: 'northwell',
+    headline: 'First CT market entry: Opening Greenwich primary care + specialty hub (Q4 2026) — 15 physicians across 6 specialties',
+    soWhat: "Northwell's Greenwich entry is a direct threat — they will leverage NY brand recognition with affluent Fairfield County patients.",
+    source: 'Greenwich Time',
+    sourceUrl: '#',
+    publishedDate: '2026-05-16',
+    serviceLine: 'Primary Care',
+    itemType: 'expansion',
+    geographyLevel: 'local',
+  },
+  {
+    id: 'northwell-2',
+    competitorId: 'northwell',
+    headline: 'Direct-to-employer contract signed with Indeed.com (major Stamford employer, 2,400 employees)',
+    soWhat: "Northwell is moving aggressively on Stamford's employer base — audit your employer health relationships immediately.",
+    source: 'Hartford Business Journal',
+    sourceUrl: '#',
+    publishedDate: '2026-05-09',
+    serviceLine: 'Payer/Contracting',
+    itemType: 'payer',
+    geographyLevel: 'local',
+  },
+  {
+    id: 'northwell-3',
+    competitorId: 'northwell',
+    headline: '3 urgent care sites announced in Fairfield County (Darien, Westport, New Canaan)',
+    soWhat: 'Northwell is seeding brand awareness and primary care access across your highest-income zip codes.',
+    source: 'Northwell Press Release',
+    sourceUrl: '#',
+    publishedDate: '2026-04-25',
+    serviceLine: 'Primary Care',
+    itemType: 'expansion',
+    geographyLevel: 'local',
+  },
+  {
+    id: 'northwell-4',
+    competitorId: 'northwell',
+    headline: 'EVP hired to lead CT market expansion: Maria Gonzalez (former Yale School of Public Health)',
+    soWhat: 'Dedicated CT market leadership signals Northwell is treating CT as a long-term strategic priority, not a test.',
+    source: 'Modern Healthcare',
+    sourceUrl: '#',
+    publishedDate: '2026-04-14',
+    serviceLine: null,
+    itemType: 'leadership',
+    geographyLevel: 'regional',
+  },
+  {
+    id: 'northwell-5',
+    competitorId: 'northwell',
+    headline: 'Virtual cardiology platform launched — accessible to CT residents',
+    soWhat: 'Northwell is capturing CT cardiology patients before they ever enter a local ED — strengthen your cardiovascular digital access.',
+    source: 'Northwell Press Release',
+    sourceUrl: '#',
+    publishedDate: '2026-04-03',
+    serviceLine: 'Cardiology',
+    itemType: 'technology',
+    geographyLevel: 'regional',
+  },
+  {
+    id: 'northwell-6',
+    competitorId: 'northwell',
+    headline: 'Healthgrades rating increased to 4.7/5.0 following patient experience initiative',
+    soWhat: "Northwell's quality reputation is improving — proactively benchmark your own ratings and address gaps.",
+    source: 'Healthgrades',
+    sourceUrl: '#',
+    publishedDate: '2026-03-28',
+    serviceLine: 'Patient Experience',
+    itemType: 'other',
+    geographyLevel: 'national',
+  },
+  {
+    id: 'northwell-7',
+    competitorId: 'northwell',
+    headline: 'Academic affiliation agreement signed with UConn Health',
+    soWhat: 'Northwell gains academic credibility in CT — positions them to recruit CT physicians and partner with CT providers.',
+    source: 'CT Mirror',
+    sourceUrl: '#',
+    publishedDate: '2026-03-15',
+    serviceLine: 'Academic/Research',
+    itemType: 'partnership',
+    geographyLevel: 'regional',
+  },
+  {
+    id: 'northwell-8',
+    competitorId: 'northwell',
+    headline: 'Partnership with Stamford Health for oncology co-management — MONITORING',
+    soWhat: 'Monitor for formal announcement — a Northwell oncology partnership would significantly alter the competitive position.',
+    source: 'Market Intelligence',
+    sourceUrl: '#',
+    publishedDate: '2026-03-01',
+    serviceLine: 'Oncology',
+    itemType: 'partnership',
+    geographyLevel: 'local',
+    flag: 'monitoring',
+  },
+]
+
+// ============================================================
+// MARKET PULSE TOPICS
+// ============================================================
+export const MARKET_PULSE_TOPICS = [
+  {
+    id: 'mp-1',
+    name: 'Hospital-at-Home',
+    momentumScore: 82,
+    trendDirection: 'up',
+    summary: 'Rapidly maturing; 8 CT-area health systems exploring or implementing home-based acute care programs.',
+    peerActivity: 'YNHH, Hartford Hospital, and 6 others actively piloting',
+  },
+  {
+    id: 'mp-2',
+    name: 'Longevity Medicine / Executive Health',
+    momentumScore: 74,
+    trendDirection: 'up',
+    summary: 'Early adopter phase nationally; affluent markets like Fairfield County are prime candidates for premium membership models.',
+    peerActivity: 'Mass General Brigham launched nationally; 2 regional systems exploring',
+  },
+  {
+    id: 'mp-3',
+    name: 'Virtual Behavioral Health',
+    momentumScore: 88,
+    trendDirection: 'neutral',
+    summary: 'Market saturation approaching; differentiation window closing as HHC and major nationals now saturate CT access.',
+    peerActivity: 'HHC, Yale, and 4 national platforms active in CT market',
+  },
+  {
+    id: 'mp-4',
+    name: 'Retail Health Partnerships',
+    momentumScore: 61,
+    trendDirection: 'down',
+    summary: 'Mixed results nationally; Walmart Health retreat dampened enthusiasm but CVS/Aetna and Amazon Clinic still active.',
+    peerActivity: 'HHC piloting with Walmart (3 CT sites); cautious watch recommended',
+  },
+]
+
+// ============================================================
+// INNOVATION FEED ITEMS
+// ============================================================
+export const INNOVATION_ITEMS = [
+  {
+    id: 'innov-1',
+    systemName: 'Mayo Clinic',
+    headline: 'AI-powered early cancer detection program — 40% improvement in stage 1 detection across 3 tumor types',
+    summary: 'Multi-modal AI trained on imaging, genomics, and biomarkers dramatically improves early-stage detection rates across lung, pancreatic, and colorectal cancers.',
+    outcomes: '40% improvement in stage 1 detection; 22% reduction in late-stage presentations',
+    serviceLine: 'Oncology',
+    initiativeType: 'technology',
+    publishedDate: '2026-05-10',
+    relevanceTags: ['High-volume cancer centers', 'Academic medical centers', 'AI/technology investment'],
+  },
+  {
+    id: 'innov-2',
+    systemName: 'Kaiser Permanente',
+    headline: 'Home-based cardiac monitoring reduces readmissions 32% in 12-month pilot',
+    summary: 'Wearable-integrated remote monitoring for post-discharge cardiac patients cuts readmissions significantly while improving patient satisfaction scores.',
+    outcomes: '32% readmission reduction; NPS increase of 18 points over 12 months',
+    serviceLine: 'Cardiology',
+    initiativeType: 'care_model',
+    publishedDate: '2026-05-03',
+    relevanceTags: ['Value-based care', 'Post-acute strategy', 'Cardiac programs'],
+  },
+  {
+    id: 'innov-3',
+    systemName: 'Mass General Brigham',
+    headline: 'Longevity Medicine clinic launched — executive health + preventive genomics, $8K/yr membership',
+    summary: 'Premium annual membership program targeting high-income patients with comprehensive preventive care, genomic screening, and concierge access.',
+    outcomes: 'Sold out Year 1 waitlist of 400 members; $3.2M revenue in first year',
+    serviceLine: 'Executive Health',
+    initiativeType: 'new_service_line',
+    publishedDate: '2026-04-22',
+    relevanceTags: ['Affluent markets', 'Revenue diversification', 'Executive health'],
+  },
+  {
+    id: 'innov-4',
+    systemName: 'Intermountain Health',
+    headline: 'ABA therapy integrated into pediatric primary care — 60% faster diagnosis to treatment timeline',
+    summary: 'Co-located ABA therapists within pediatric primary care practices dramatically reduce wait times from autism diagnosis to therapy initiation.',
+    outcomes: '60% reduction in diagnosis-to-treatment time; 89% family satisfaction score',
+    serviceLine: 'Behavioral Health',
+    initiativeType: 'care_integration',
+    publishedDate: '2026-04-15',
+    relevanceTags: ['Pediatric organizations', 'Behavioral health integration', 'Access improvement'],
+  },
+  {
+    id: 'innov-5',
+    systemName: 'Geisinger',
+    headline: 'Direct-to-employer virtual mental health program — 94% employee utilization rate',
+    summary: 'Customized mental health benefit offered directly to self-insured employers, bypassing traditional EAP channels with on-demand access.',
+    outcomes: '94% utilization (vs 3% industry average for EAPs); 41% reduction in mental health-related absenteeism',
+    serviceLine: 'Behavioral Health',
+    initiativeType: 'employer_partnership',
+    publishedDate: '2026-04-08',
+    relevanceTags: ['Employer strategy', 'Behavioral health', 'Digital health'],
+  },
+  {
+    id: 'innov-6',
+    systemName: 'Cleveland Clinic',
+    headline: 'Orthopedic surgery center of excellence brand licensed to 3 regional health systems',
+    summary: 'Cleveland Clinic licenses its orthopedic COE brand, protocols, and quality standards to regional systems seeking to elevate service line reputation.',
+    outcomes: '3 health systems signed; $2M+ licensing revenue per system annually',
+    serviceLine: 'Orthopedics',
+    initiativeType: 'partnership_model',
+    publishedDate: '2026-03-25',
+    relevanceTags: ['Service line development', 'Brand strategy', 'Orthopedics'],
+  },
+]
+
+// ============================================================
+// WEEKLY DIGEST
+// ============================================================
+export const WEEKLY_DIGEST = {
+  weekOf: 'May 19, 2026',
+  sections: [
+    {
+      title: 'Market Moves This Week',
+      itemCount: 5,
+      icon: 'activity',
+    },
+    {
+      title: 'National Innovation Spotlight',
+      itemCount: 3,
+      icon: 'lightbulb',
+    },
+    {
+      title: 'Leadership Changes',
+      itemCount: 2,
+      icon: 'users',
+    },
+    {
+      title: 'Regulatory Signals',
+      itemCount: 2,
+      icon: 'file-text',
+    },
+  ],
+}
+
+// ============================================================
+// CON FILINGS
+// ============================================================
+export const CON_FILINGS = [
+  {
+    id: 'con-1',
+    competitorId: 'ynhh',
+    facility: 'Bridgeport Hospital',
+    beds: 15,
+    serviceLine: 'Oncology',
+    filedDate: '2026-05-08',
+    status: 'Under Review',
+    statusColor: '#D97706',
+    state: 'CT',
+  },
+  {
+    id: 'con-2',
+    competitorId: 'hhc',
+    facility: 'Backus Hospital',
+    beds: 20,
+    serviceLine: 'Behavioral Health',
+    filedDate: '2026-03-20',
+    status: 'Public Comment',
+    statusColor: '#7C3AED',
+    state: 'CT',
+  },
+  {
+    id: 'con-3',
+    competitorId: 'northwell',
+    facility: 'Greenwich (New Facility)',
+    beds: null,
+    serviceLine: 'Primary Care',
+    filedDate: '2026-04-30',
+    status: 'Pending',
+    statusColor: '#475569',
+    state: 'CT',
+  },
+]
+
+// ============================================================
+// PEER CONNECTIONS
+// ============================================================
+export const PEER_CONNECTIONS = [
+  {
+    id: 'peer-1',
+    name: 'Dr. James Park',
+    title: 'VP Strategy',
+    org: 'Middlesex Health',
+    topic: 'Exploring Hospital-at-Home',
+    sentDate: '2026-05-15',
+    status: 'Awaiting Response',
+    statusColor: '#D97706',
+  },
+  {
+    id: 'peer-2',
+    name: 'Sarah Mitchell',
+    title: 'Strategy Director',
+    org: 'Day Kimball',
+    topic: 'Longevity Medicine clinic launch',
+    sentDate: '2026-05-10',
+    status: 'Connected',
+    statusColor: '#059669',
+  },
+]
+
+// ============================================================
+// WATCHLIST COMPETITORS (for right rail)
+// ============================================================
+export const WATCHLIST = [
+  { competitorId: 'ynhh', alertCount: 8 },
+  { competitorId: 'hhc', alertCount: 6 },
+  { competitorId: 'northwell', alertCount: 4 },
+]
+
+// ============================================================
+// PATIENT SENTIMENT
+// ============================================================
+export const PATIENT_SENTIMENT = [
+  {
+    id: 'sent-ynhh',
+    competitorId: 'ynhh',
+    platform: 'Healthgrades',
+    currentRating: 4.3,
+    previousRating: 4.4,
+    change: -0.1,
+    trend: 'down',
+    reviewCount: 3241,
+    period: 'Q1 2026',
+    topPositiveThemes: ['Clinical quality', 'Specialist access', 'Cancer care'],
+    topNegativeThemes: ['Wait times', 'Parking', 'Billing complexity'],
+    soWhat: "YNHH's slight rating decline despite major expansion investments creates an opening — differentiate on access experience and billing transparency.",
+  },
+  {
+    id: 'sent-hhc',
+    competitorId: 'hhc',
+    platform: 'Healthgrades',
+    currentRating: 4.1,
+    previousRating: 4.0,
+    change: +0.1,
+    trend: 'up',
+    reviewCount: 2156,
+    period: 'Q1 2026',
+    topPositiveThemes: ['Provider knowledge', 'Clean facilities', 'Oncology team'],
+    topNegativeThemes: ['System navigation', 'Care handoffs', 'Communication'],
+    soWhat: "HHC's scores are rising steadily — but patients still flag coordination issues in a large system. Emphasize integrated care and care navigation as differentiators.",
+  },
+  {
+    id: 'sent-northwell',
+    competitorId: 'northwell',
+    platform: 'Google Reviews',
+    currentRating: 4.7,
+    previousRating: 4.2,
+    change: +0.5,
+    trend: 'up',
+    reviewCount: 1842,
+    period: 'Q1 2026',
+    topPositiveThemes: ['Staff responsiveness', 'Reduced wait times', 'Modern facilities'],
+    topNegativeThemes: ['Billing complexity', 'Out-of-network confusion'],
+    soWhat: "Northwell's +0.5 rating surge is the largest in the market — driven by a deliberate patient experience program. Benchmark your own scores against this trajectory now.",
+  },
+]
+
+// ============================================================
+// DASHBOARD STATS
+// ============================================================
+export const DASHBOARD_STATS = [
+  {
+    label: 'New Alerts',
+    value: 12,
+    subtitle: 'This week',
+    icon: 'Bell',
+    color: '#0F6E56',
+    bgColor: '#E6F4F1',
+  },
+  {
+    label: 'Competitor Moves',
+    value: 8,
+    subtitle: 'Last 7 days',
+    icon: 'Activity',
+    color: '#D97706',
+    bgColor: '#FEF3C7',
+  },
+  {
+    label: 'CON Filings',
+    value: 3,
+    subtitle: 'Pending in region',
+    icon: 'FileText',
+    color: '#475569',
+    bgColor: '#F1F5F9',
+  },
+  {
+    label: 'Peer Connections',
+    value: 2,
+    subtitle: 'Awaiting response',
+    icon: 'Users',
+    color: '#059669',
+    bgColor: '#DCFCE7',
+  },
+]
