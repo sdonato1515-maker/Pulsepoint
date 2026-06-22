@@ -3,15 +3,21 @@ import { X, Plus, Trash2, CheckCircle, RotateCcw, ChevronDown } from 'lucide-rea
 import { useData } from '../../context/DataContext.jsx'
 
 const COMPETITORS_LIST = [
+  { id: 'greenwich', label: 'Greenwich Hospital' },
+  { id: 'norwalk', label: 'Norwalk Hospital' },
+  { id: 'stvincents', label: "St. Vincent's Medical Center" },
+  { id: 'stamford-health', label: 'Stamford Health' },
+  { id: 'northwell', label: 'Northwell Health' },
+  { id: 'nyp', label: 'NewYork-Presbyterian (NYP)' },
+  { id: 'nyu', label: 'NYU Langone Health' },
   { id: 'ynhh', label: 'Yale New Haven Health (YNHH)' },
   { id: 'hhc', label: 'Hartford HealthCare (HHC)' },
-  { id: 'northwell', label: 'Northwell Health' },
 ]
 
 const SERVICE_LINES = [
   'Cardiology', 'Oncology', 'Primary Care', 'Behavioral Health', 'Orthopedics',
-  'Neurology', 'Payer/Contracting', 'Value-Based Care', 'Patient Experience',
-  'Academic/Research', 'Executive Health',
+  'Neurology', 'Pediatrics', 'Radiology', 'Facilities', 'Strategy',
+  'Multi-specialty', 'Payer/Contracting', 'Patient Experience', 'Academic/Research',
 ]
 
 const ITEM_TYPES = [
