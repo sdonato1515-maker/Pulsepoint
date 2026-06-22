@@ -10,7 +10,6 @@ import {
   WEEKLY_DIGEST,
   PATIENT_SENTIMENT,
   INNOVATION_ITEMS,
-  PEER_CONNECTIONS,
 } from '../data/seed.js'
 
 // ── localStorage helper ───────────────────────────────────────────────────────
@@ -33,9 +32,19 @@ function useLocalStorage(key, seed) {
   return [value, set]
 }
 
+const SEED_VERSION = '2'
+
 const DataContext = createContext(null)
 
 export function DataProvider({ children }) {
+  if (localStorage.getItem('pp_seed_version') !== SEED_VERSION) {
+    localStorage.removeItem('pp_intel')
+    localStorage.removeItem('pp_pulse')
+    localStorage.removeItem('pp_stats')
+    localStorage.removeItem('pp_situation')
+    localStorage.setItem('pp_seed_version', SEED_VERSION)
+  }
+
   const { items: liveItems, connected } = useIntelFeed()
   const [intelligenceItems, setIntelligenceItems] = useLocalStorage('pp_intel', INTELLIGENCE_ITEMS)
 
@@ -48,7 +57,7 @@ export function DataProvider({ children }) {
   const [marketPulseTopics, setMarketPulseTopics] = useLocalStorage('pp_pulse', MARKET_PULSE_TOPICS)
   const [dashboardStats, setDashboardStats] = useLocalStorage('pp_stats', DASHBOARD_STATS)
   const [situationReport, setSituationReport] = useLocalStorage('pp_situation', {
-    text: "Northwell Health's CT market entry is accelerating — 3 competitive moves in 8 days including a direct-to-employer contract with Indeed.com (2,400 Stamford employees). Recommend scheduling a market response session with your strategy team this week.",
+    text: "Oncology competition intensifying across Fairfield County — Greenwich Hospital broke ground on Smilow Cancer, St. Vincent's received $15M for oncology renovations, and HHC secured first-in-nation MSK partnership. Stamford Health's $275M campus transformation with new Bennett Cancer Center is critical to maintaining position.",
     updatedAt: '2026-05-19',
   })
   const [competitors] = useState(COMPETITORS)
@@ -57,7 +66,7 @@ export function DataProvider({ children }) {
   const [weeklyDigest] = useState(WEEKLY_DIGEST)
   const [patientSentiment] = useState(PATIENT_SENTIMENT)
   const [innovationItems] = useState(INNOVATION_ITEMS)
-  const [peerConnections] = useState(PEER_CONNECTIONS)
+
 
   // ── Intelligence mutations ─────────────────────────────────────────────────
   function addIntelItem(item) {
@@ -97,7 +106,7 @@ export function DataProvider({ children }) {
     setMarketPulseTopics(MARKET_PULSE_TOPICS)
     setDashboardStats(DASHBOARD_STATS)
     setSituationReport({
-      text: "Northwell Health's CT market entry is accelerating — 3 competitive moves in 8 days including a direct-to-employer contract with Indeed.com (2,400 Stamford employees). Recommend scheduling a market response session with your strategy team this week.",
+      text: "Oncology competition intensifying across Fairfield County — Greenwich Hospital broke ground on Smilow Cancer, St. Vincent's received $15M for oncology renovations, and HHC secured first-in-nation MSK partnership. Stamford Health's $275M campus transformation with new Bennett Cancer Center is critical to maintaining position.",
       updatedAt: '2026-05-19',
     })
   }
@@ -107,7 +116,7 @@ export function DataProvider({ children }) {
       // Data
       intelligenceItems, marketPulseTopics, dashboardStats, situationReport,
       competitors, conFilings, watchlist, weeklyDigest, patientSentiment,
-      innovationItems, peerConnections,
+      innovationItems,
       // Live status
       backendConnected: connected,
       // Mutations

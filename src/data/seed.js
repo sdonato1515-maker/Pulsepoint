@@ -616,31 +616,6 @@ export const CON_FILINGS = [
   },
 ]
 
-// ============================================================
-// PEER CONNECTIONS
-// ============================================================
-export const PEER_CONNECTIONS = [
-  {
-    id: 'peer-1',
-    name: 'Dr. James Park',
-    title: 'VP Strategy',
-    org: 'Middlesex Health',
-    topic: 'Northwell-Nuvance merger impact on CT market',
-    sentDate: '2026-06-10',
-    status: 'Awaiting Response',
-    statusColor: '#D97706',
-  },
-  {
-    id: 'peer-2',
-    name: 'Sarah Mitchell',
-    title: 'Strategy Director',
-    org: 'Day Kimball',
-    topic: 'MSK Care Partner designation — lessons learned',
-    sentDate: '2026-06-05',
-    status: 'Connected',
-    statusColor: '#059669',
-  },
-]
 
 // ============================================================
 // WATCHLIST COMPETITORS (for right rail)
@@ -733,9 +708,9 @@ export const DASHBOARD_STATS = [
     bgColor: '#F1F5F9',
   },
   {
-    label: 'Peer Connections',
-    value: 2,
-    subtitle: 'Awaiting response',
+    label: 'Service Lines',
+    value: 9,
+    subtitle: 'Tracked categories',
     icon: 'Users',
     color: '#059669',
     bgColor: '#DCFCE7',

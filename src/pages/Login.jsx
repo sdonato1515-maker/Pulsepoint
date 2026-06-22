@@ -64,8 +64,8 @@ export default function Login() {
               },
               {
                 icon: Users,
-                title: 'Peer strategy network',
-                desc: 'Structured connections with strategy executives at non-competing systems.',
+                title: '8 health systems tracked',
+                desc: 'Greenwich, Norwalk, St. Vincent\'s, Northwell, NYP, NYU Langone, YNHH, and HHC.',
               },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="flex gap-4">
