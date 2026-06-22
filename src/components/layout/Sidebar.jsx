@@ -5,7 +5,6 @@ import {
   Radar,
   TrendingUp,
   Lightbulb,
-  Users,
   BookOpen,
   Settings,
   Zap,
@@ -17,7 +16,6 @@ const NAV_ITEMS = [
   { label: 'Intelligence Feed', icon: Radar, path: '/intelligence' },
   { label: 'Market Pulse', icon: TrendingUp, path: '/market-pulse' },
   { label: 'Innovation Feed', icon: Lightbulb, path: '/innovation' },
-  { label: 'Peer Network', icon: Users, path: '/peer-network' },
   { label: 'Weekly Digest', icon: BookOpen, path: '/digest' },
 ]
 
