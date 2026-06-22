@@ -27,7 +27,7 @@ export default function Login() {
       {/* Left panel — branding */}
       <div
         className="hidden lg:flex lg:w-[45%] flex-col justify-between p-12"
-        style={{ backgroundColor: '#0F6E56' }}
+        style={{ backgroundColor: '#A52834' }}
       >
         {/* Logo */}
         <div className="flex items-center gap-3">
@@ -92,7 +92,7 @@ export default function Login() {
         <div className="w-full max-w-sm">
           {/* Mobile logo */}
           <div className="flex items-center gap-2.5 mb-8 lg:hidden">
-            <div className="w-8 h-8 bg-[#0F6E56] rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#A52834] rounded-lg flex items-center justify-center">
               <Zap size={17} className="text-white" strokeWidth={2.5} />
             </div>
             <span className="font-bold text-lg text-[#1E293B]">PulsePoint</span>
@@ -115,7 +115,7 @@ export default function Login() {
                 required
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                className="w-full px-3 py-2.5 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] bg-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56] transition-colors"
+                className="w-full px-3 py-2.5 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] bg-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834] transition-colors"
               />
             </div>
 
@@ -127,7 +127,7 @@ export default function Login() {
                   required
                   value={password}
                   onChange={e => setPassword(e.target.value)}
-                  className="w-full px-3 py-2.5 pr-10 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] bg-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56] transition-colors"
+                  className="w-full px-3 py-2.5 pr-10 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] bg-[#F8FAFC] focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834] transition-colors"
                 />
                 <button
                   type="button"
@@ -146,7 +146,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-2.5 bg-[#0F6E56] text-white text-sm font-semibold rounded-lg hover:bg-[#0D5E49] transition-colors disabled:opacity-60 disabled:cursor-not-allowed mt-2"
+              className="w-full py-2.5 bg-[#A52834] text-white text-sm font-semibold rounded-lg hover:bg-[#8B2029] transition-colors disabled:opacity-60 disabled:cursor-not-allowed mt-2"
             >
               {isLoading ? 'Signing in…' : 'Sign in to PulsePoint'}
             </button>

@@ -51,7 +51,7 @@ export function CompetitorMoveCard({ item }) {
       <p className="text-sm font-semibold text-[#1E293B] leading-snug">{item.headline}</p>
 
       {item.soWhat && (
-        <p className="text-sm italic text-[#475569] mt-2 pl-3 border-l-2 border-[#0F6E56]">
+        <p className="text-sm italic text-[#475569] mt-2 pl-3 border-l-2 border-[#A52834]">
           {item.soWhat}
         </p>
       )}

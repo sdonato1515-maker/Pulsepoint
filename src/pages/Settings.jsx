@@ -13,7 +13,7 @@ function Toggle({ checked, onChange }) {
   return (
     <button
       onClick={() => onChange(!checked)}
-      className={`relative w-9 h-5 rounded-full transition-colors ${checked ? 'bg-[#0F6E56]' : 'bg-[#CBD5E1]'}`}
+      className={`relative w-9 h-5 rounded-full transition-colors ${checked ? 'bg-[#A52834]' : 'bg-[#CBD5E1]'}`}
     >
       <span
         className={`absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full shadow-sm transition-transform ${checked ? 'translate-x-4' : 'translate-x-0'}`}
@@ -106,7 +106,7 @@ export default function Settings() {
       {/* Profile */}
       <SectionCard title="Your Profile" description="Account information from your organization">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-full bg-[#0F6E56] text-white text-lg font-bold flex items-center justify-center flex-shrink-0">
+          <div className="w-12 h-12 rounded-full bg-[#A52834] text-white text-lg font-bold flex items-center justify-center flex-shrink-0">
             {user?.name?.split(' ').map(n => n[0]).join('').slice(0, 2) || 'SC'}
           </div>
           <div>
@@ -159,12 +159,12 @@ export default function Settings() {
               onChange={e => setNewCompetitor(e.target.value)}
               onKeyDown={e => e.key === 'Enter' && addToWatchlist()}
               placeholder="Add a competitor health system…"
-              className="flex-1 px-3 py-2 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56]"
+              className="flex-1 px-3 py-2 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834]"
             />
             <button
               onClick={addToWatchlist}
               disabled={!newCompetitor.trim()}
-              className="flex items-center gap-1.5 px-3 py-2 bg-[#0F6E56] text-white text-sm font-medium rounded-lg hover:bg-[#0D5E49] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+              className="flex items-center gap-1.5 px-3 py-2 bg-[#A52834] text-white text-sm font-medium rounded-lg hover:bg-[#8B2029] transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
             >
               <Plus size={14} /> Add
             </button>
@@ -185,7 +185,7 @@ export default function Settings() {
           ].map(({ key, label, desc }) => (
             <div key={key} className="flex items-start justify-between gap-4 py-3 border-b border-[#F1F5F9] last:border-0">
               <div className="flex items-start gap-2.5">
-                <MapPin size={14} className="text-[#0F6E56] mt-0.5 flex-shrink-0" />
+                <MapPin size={14} className="text-[#A52834] mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-sm font-medium text-[#1E293B]">{label}</p>
                   <p className="text-xs text-[#94A3B8] mt-0.5">{desc}</p>
@@ -209,8 +209,8 @@ export default function Settings() {
               onClick={() => toggleServiceLine(sl)}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-colors border ${
                 activeServiceLines.includes(sl)
-                  ? 'bg-[#E6F4F1] text-[#0F6E56] border-[#0F6E56]/30'
-                  : 'bg-[#F8FAFC] text-[#94A3B8] border-[#E2E8F0] hover:border-[#0F6E56]/30'
+                  ? 'bg-[#F9E8EA] text-[#A52834] border-[#A52834]/30'
+                  : 'bg-[#F8FAFC] text-[#94A3B8] border-[#E2E8F0] hover:border-[#A52834]/30'
               }`}
             >
               {activeServiceLines.includes(sl) && <Check size={11} strokeWidth={2.5} />}
@@ -253,7 +253,7 @@ export default function Settings() {
         <button className="px-4 py-2 text-sm font-medium text-[#475569] border border-[#E2E8F0] rounded-lg hover:bg-[#F8FAFC] transition-colors">
           Reset to defaults
         </button>
-        <button className="flex items-center gap-2 px-5 py-2 bg-[#0F6E56] text-white text-sm font-medium rounded-lg hover:bg-[#0D5E49] transition-colors shadow-sm">
+        <button className="flex items-center gap-2 px-5 py-2 bg-[#A52834] text-white text-sm font-medium rounded-lg hover:bg-[#8B2029] transition-colors shadow-sm">
           <Check size={14} /> Save settings
         </button>
       </div>

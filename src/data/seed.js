@@ -688,8 +688,8 @@ export const DASHBOARD_STATS = [
     value: 22,
     subtitle: 'This week',
     icon: 'Bell',
-    color: '#0F6E56',
-    bgColor: '#E6F4F1',
+    color: '#A52834',
+    bgColor: '#F9E8EA',
   },
   {
     label: 'Competitor Moves',

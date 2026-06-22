@@ -48,7 +48,7 @@ function StatCard({ label, value, subtitle, icon, color, bgColor }) {
 function SituationBanner({ report }) {
   return (
     <div className="bg-white rounded-2xl border border-[#E2E8F0] shadow-sm overflow-hidden">
-      <div className="flex items-center gap-3 px-5 py-2.5 border-b border-[#E2E8F0]" style={{ backgroundColor: '#0F6E56' }}>
+      <div className="flex items-center gap-3 px-5 py-2.5 border-b border-[#E2E8F0]" style={{ backgroundColor: '#A52834' }}>
         <AlertTriangle size={14} className="text-white/80" />
         <span className="text-xs font-bold text-white tracking-widest uppercase">
           Situation Report · Week of May 19, 2026
@@ -57,7 +57,7 @@ function SituationBanner({ report }) {
       <div className="px-5 py-4">
         <p className="text-sm text-[#1E293B] leading-relaxed">{report.text}</p>
         <p className="text-xs text-[#94A3B8] mt-2">
-          Last updated {formatDate(report.updatedAt)} · Edit via <span className="text-[#0F6E56] font-medium">Update Dashboard</span>
+          Last updated {formatDate(report.updatedAt)} · Edit via <span className="text-[#A52834] font-medium">Update Dashboard</span>
         </p>
       </div>
     </div>
@@ -90,7 +90,7 @@ function MoveCard({ item, competitor }) {
           )}
         </div>
         <p className="text-sm font-semibold text-[#1E293B] leading-snug mb-2.5">{item.headline}</p>
-        <div className="border-l-[3px] border-[#0F6E56] pl-3 mb-3">
+        <div className="border-l-[3px] border-[#A52834] pl-3 mb-3">
           <p className="text-xs italic text-[#475569] leading-relaxed">{item.soWhat}</p>
         </div>
         <SourceTag source={item.source} date={item.publishedDate} url={item.sourceUrl} />
@@ -101,17 +101,17 @@ function MoveCard({ item, competitor }) {
 
 // ── Market Pulse card ─────────────────────────────────────────────────────────
 function PulseCard({ topic }) {
-  const color = topic.momentumScore >= 75 ? '#0F6E56' : topic.momentumScore >= 50 ? '#D97706' : '#DC2626'
+  const color = topic.momentumScore >= 75 ? '#A52834' : topic.momentumScore >= 50 ? '#D97706' : '#DC2626'
   const TrendIcon = topic.trendDirection === 'up' ? TrendingUp : topic.trendDirection === 'down' ? TrendingDown : Minus
   const trendColor = topic.trendDirection === 'up' ? '#059669' : topic.trendDirection === 'down' ? '#DC2626' : '#94A3B8'
 
   return (
     <Link
       to="/market-pulse"
-      className="block bg-white rounded-xl border border-[#E2E8F0] p-4 hover:shadow-md hover:border-[#0F6E56]/30 transition-all group"
+      className="block bg-white rounded-xl border border-[#E2E8F0] p-4 hover:shadow-md hover:border-[#A52834]/30 transition-all group"
     >
       <div className="flex items-start justify-between mb-3 gap-2">
-        <p className="text-sm font-semibold text-[#1E293B] group-hover:text-[#0F6E56] transition-colors leading-snug">
+        <p className="text-sm font-semibold text-[#1E293B] group-hover:text-[#A52834] transition-colors leading-snug">
           {topic.name}
         </p>
         <div className="flex items-center gap-1 flex-shrink-0" style={{ color: trendColor }}>
@@ -154,7 +154,7 @@ export default function Dashboard() {
         </div>
         <Link
           to="/digest"
-          className="flex items-center gap-1.5 text-sm font-medium text-[#0F6E56] hover:text-[#0D5E49] transition-colors"
+          className="flex items-center gap-1.5 text-sm font-medium text-[#A52834] hover:text-[#8B2029] transition-colors"
         >
           View weekly digest <ArrowRight size={14} />
         </Link>
@@ -183,7 +183,7 @@ export default function Dashboard() {
               </div>
               <Link
                 to="/intelligence"
-                className="flex items-center gap-1 text-sm font-medium text-[#0F6E56] hover:text-[#0D5E49] transition-colors"
+                className="flex items-center gap-1 text-sm font-medium text-[#A52834] hover:text-[#8B2029] transition-colors"
               >
                 View all <ChevronRight size={14} />
               </Link>
@@ -204,7 +204,7 @@ export default function Dashboard() {
               </div>
               <Link
                 to="/market-pulse"
-                className="flex items-center gap-1 text-sm font-medium text-[#0F6E56] hover:text-[#0D5E49] transition-colors"
+                className="flex items-center gap-1 text-sm font-medium text-[#A52834] hover:text-[#8B2029] transition-colors"
               >
                 Explore <ChevronRight size={14} />
               </Link>
@@ -240,7 +240,7 @@ export default function Dashboard() {
             <div className="px-5 pb-4">
               <Link
                 to="/digest"
-                className="block w-full text-center py-2 bg-[#0F6E56] text-white text-sm font-semibold rounded-xl hover:bg-[#0D5E49] transition-colors"
+                className="block w-full text-center py-2 bg-[#A52834] text-white text-sm font-semibold rounded-xl hover:bg-[#8B2029] transition-colors"
               >
                 Read Full Digest
               </Link>
@@ -251,7 +251,7 @@ export default function Dashboard() {
           <div className="bg-white rounded-2xl border border-[#E2E8F0] shadow-sm p-5">
             <div className="flex items-center justify-between mb-3">
               <h3 className="text-sm font-bold text-[#1E293B]">Watchlist</h3>
-              <Link to="/settings" className="text-xs font-medium text-[#0F6E56] hover:underline">Manage</Link>
+              <Link to="/settings" className="text-xs font-medium text-[#A52834] hover:underline">Manage</Link>
             </div>
             <div className="space-y-1">
               {watchlist.map(entry => {

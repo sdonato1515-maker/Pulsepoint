@@ -42,7 +42,7 @@ export default function SourceTag({ source, date, url }) {
           href={resolvedUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-xs font-medium text-[#0F6E56] hover:text-[#0D5E49] transition-colors whitespace-nowrap flex-shrink-0"
+          className="inline-flex items-center gap-1 text-xs font-medium text-[#A52834] hover:text-[#8B2029] transition-colors whitespace-nowrap flex-shrink-0"
         >
           Read article
           <ExternalLink size={11} strokeWidth={2} />

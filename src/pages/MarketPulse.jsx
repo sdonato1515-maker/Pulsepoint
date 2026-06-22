@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { TrendingUp, TrendingDown, Minus, ArrowLeft, Users, ChevronRight, Lightbulb } from 'lucide-react'
-import { Link } from 'react-router-dom'
 import { MARKET_PULSE_TOPICS } from '../data/seed.js'
 
 const TOPIC_DETAIL = {
@@ -60,6 +59,34 @@ const TOPIC_DETAIL = {
       { q: 'We have a current primary care access strategy', options: ['Yes — current', 'Outdated', 'No'] },
     ],
   },
+  'mp-5': {
+    boardQuestions: [
+      'What AI capabilities are already embedded in our Epic deployment that we are not fully utilizing, and what is the activation roadmap?',
+      'Which clinical domains — sepsis prediction, readmission risk, imaging interpretation, documentation — have the strongest ROI evidence and lowest implementation risk in systems like ours?',
+      'What is our clinical governance model for validating AI recommendations before clinician deployment, and who owns accountability when an AI recommendation is acted upon?',
+      "With YNHH's new CMO from Cleveland Clinic signaling a quality-benchmark push, how do we use AI proactively rather than reactively to maintain quality parity?",
+    ],
+    readinessItems: [
+      { q: 'We have reviewed our Epic AI and ambient documentation capabilities and have a deployment roadmap', options: ['Yes — active roadmap', 'In review', 'Not yet'] },
+      { q: 'We have clinical leadership champions willing to pilot AI decision support tools', options: ['Yes', 'Emerging interest', 'No'] },
+      { q: 'We have a data governance and clinical AI validation framework', options: ['Formal framework', 'In development', 'No'] },
+      { q: 'We have budget allocated for AI clinical tools beyond EHR-native capabilities', options: ['Yes — FY26 budget', 'Under discussion', 'No'] },
+    ],
+  },
+  'mp-6': {
+    boardQuestions: [
+      'Who are the top 20 self-insured employers in Fairfield County, what is our current employee health market share with each, and where are we most at risk given YNHH and Northwell moves?',
+      'With Northwell signed with Indeed.com (2,400 Stamford employees) and YNHH signed with Synchrony Financial, what is our 90-day response strategy for our highest-risk employer relationships?',
+      'What is our operational readiness to offer the bundled services, enhanced access, and outcomes reporting that self-insured employers require — and what gaps must we close first?',
+      'Should we build a dedicated employer health team in-house, acquire a third-party administrator relationship, or partner with an existing employer health platform?',
+    ],
+    readinessItems: [
+      { q: 'We have a current analysis of the top self-insured employers in our geography and our penetration with each', options: ['Yes — current', 'Outdated', 'No'] },
+      { q: 'We have dedicated employer health sales and relationship management capacity', options: ['Yes', 'Informal capacity', 'No'] },
+      { q: 'We can offer 24/7 access, care navigation, and outcomes reporting to an employer client today', options: ['Yes', 'Partial capability', 'No'] },
+      { q: 'We have a direct contracting mechanism not reliant solely on broker channels', options: ['Yes', 'In development', 'No'] },
+    ],
+  },
 }
 
 function TrendBadge({ direction }) {
@@ -81,7 +108,7 @@ function TrendBadge({ direction }) {
 }
 
 function MomentumBar({ score }) {
-  const color = score >= 75 ? '#0F6E56' : score >= 50 ? '#D97706' : '#DC2626'
+  const color = score >= 75 ? '#A52834' : score >= 50 ? '#D97706' : '#DC2626'
   return (
     <div>
       <div className="flex items-center justify-between mb-1.5">
@@ -107,8 +134,8 @@ function ReadinessItem({ item }) {
             onClick={() => setSelected(i)}
             className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-colors border ${
               selected === i
-                ? 'bg-[#0F6E56] text-white border-[#0F6E56]'
-                : 'bg-white text-[#475569] border-[#E2E8F0] hover:border-[#0F6E56] hover:text-[#0F6E56]'
+                ? 'bg-[#A52834] text-white border-[#A52834]'
+                : 'bg-white text-[#475569] border-[#E2E8F0] hover:border-[#A52834] hover:text-[#A52834]'
             }`}
           >
             {opt}
@@ -123,16 +150,16 @@ function TopicCard({ topic, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="bg-white rounded-xl border border-[#E2E8F0] shadow-sm p-5 text-left hover:shadow-md hover:border-[#0F6E56]/40 transition-all group w-full"
+      className="bg-white rounded-xl border border-[#E2E8F0] shadow-sm p-5 text-left hover:shadow-md hover:border-[#A52834]/40 transition-all group w-full"
     >
       <div className="flex items-start justify-between mb-4 gap-3">
         <div className="flex-1">
-          <h3 className="text-base font-semibold text-[#1E293B] group-hover:text-[#0F6E56] transition-colors mb-1.5">
+          <h3 className="text-base font-semibold text-[#1E293B] group-hover:text-[#A52834] transition-colors mb-1.5">
             {topic.name}
           </h3>
           <TrendBadge direction={topic.trendDirection} />
         </div>
-        <ChevronRight size={18} className="text-[#CBD5E1] group-hover:text-[#0F6E56] transition-colors flex-shrink-0 mt-0.5" />
+        <ChevronRight size={18} className="text-[#CBD5E1] group-hover:text-[#A52834] transition-colors flex-shrink-0 mt-0.5" />
       </div>
       <MomentumBar score={topic.momentumScore} />
       <p className="text-xs text-[#475569] mt-3 leading-relaxed line-clamp-2">{topic.summary}</p>
@@ -148,14 +175,14 @@ function TopicCard({ topic, onClick }) {
 
 function TopicDetail({ topic, onBack }) {
   const detail = TOPIC_DETAIL[topic.id] || { boardQuestions: [], readinessItems: [] }
-  const scoreColor = topic.momentumScore >= 75 ? '#0F6E56' : topic.momentumScore >= 50 ? '#D97706' : '#DC2626'
+  const scoreColor = topic.momentumScore >= 75 ? '#A52834' : topic.momentumScore >= 50 ? '#D97706' : '#DC2626'
 
   return (
     <div className="space-y-6">
       <div>
         <button
           onClick={onBack}
-          className="flex items-center gap-1.5 text-sm text-[#475569] hover:text-[#0F6E56] transition-colors mb-4"
+          className="flex items-center gap-1.5 text-sm text-[#475569] hover:text-[#A52834] transition-colors mb-4"
         >
           <ArrowLeft size={15} /> Back to all topics
         </button>
@@ -198,8 +225,8 @@ function TopicDetail({ topic, onBack }) {
           {/* Peer Activity */}
           <div className="bg-white rounded-xl border border-[#E2E8F0] shadow-sm p-5">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-6 h-6 rounded-md bg-[#E6F4F1] flex items-center justify-center">
-                <Users size={13} className="text-[#0F6E56]" />
+              <div className="w-6 h-6 rounded-md bg-[#F9E8EA] flex items-center justify-center">
+                <Users size={13} className="text-[#A52834]" />
               </div>
               <h2 className="text-sm font-semibold text-[#1E293B]">What Peer Systems Are Doing</h2>
             </div>
@@ -217,7 +244,7 @@ function TopicDetail({ topic, onBack }) {
             <div className="space-y-3">
               {detail.boardQuestions.map((q, i) => (
                 <div key={i} className="flex gap-3">
-                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-[#E6F4F1] text-[#0F6E56] text-xs font-bold flex items-center justify-center mt-0.5">
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-[#F9E8EA] text-[#A52834] text-xs font-bold flex items-center justify-center mt-0.5">
                     {i + 1}
                   </span>
                   <p className="text-sm text-[#475569] leading-relaxed">{q}</p>
@@ -237,18 +264,6 @@ function TopicDetail({ topic, onBack }) {
             ))}
           </div>
 
-          <div className="bg-[#E6F4F1] rounded-xl border border-[#0F6E56]/20 p-5">
-            <h2 className="text-sm font-semibold text-[#0F6E56] mb-1.5">Talk to a Peer</h2>
-            <p className="text-xs text-[#475569] leading-relaxed mb-4">
-              Connect with a strategy leader at a system that has already explored or implemented this initiative.
-            </p>
-            <Link
-              to="/peer-network"
-              className="block w-full text-center bg-[#0F6E56] text-white text-sm font-medium py-2 px-4 rounded-lg hover:bg-[#0D5E49] transition-colors"
-            >
-              Find a Peer Connection
-            </Link>
-          </div>
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ function TrendIcon({ direction }) {
 
 function getMomentumColor(score) {
   if (score >= 80) return '#059669'
-  if (score >= 60) return '#0F6E56'
+  if (score >= 60) return '#A52834'
   if (score >= 40) return '#D97706'
   return '#DC2626'
 }

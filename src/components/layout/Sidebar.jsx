@@ -35,7 +35,7 @@ function NavItem({ item }) {
       className={({ isActive: routerActive }) =>
         `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150 cursor-pointer group ${
           isActive
-            ? 'bg-white text-[#0F6E56]'
+            ? 'bg-white text-[#A52834]'
             : 'text-white/70 hover:bg-white/10 hover:text-white'
         }`
       }
@@ -44,7 +44,7 @@ function NavItem({ item }) {
       <item.icon
         size={18}
         strokeWidth={isActive ? 2.5 : 2}
-        className={isActive ? 'text-[#0F6E56]' : 'text-white/70 group-hover:text-white'}
+        className={isActive ? 'text-[#A52834]' : 'text-white/70 group-hover:text-white'}
       />
       <span>{item.label}</span>
     </NavLink>
@@ -55,7 +55,7 @@ export default function Sidebar() {
   return (
     <div
       className="fixed left-0 top-0 h-full flex flex-col"
-      style={{ width: '240px', backgroundColor: '#0F6E56' }}
+      style={{ width: '240px', backgroundColor: '#A52834' }}
     >
       {/* Header / Logo */}
       <div className="px-5 py-5 border-b border-white/10">
@@ -92,7 +92,7 @@ export default function Sidebar() {
           className={({ isActive }) =>
             `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150 cursor-pointer group ${
               isActive
-                ? 'bg-white text-[#0F6E56]'
+                ? 'bg-white text-[#A52834]'
                 : 'text-white/70 hover:bg-white/10 hover:text-white'
             }`
           }
@@ -102,7 +102,7 @@ export default function Sidebar() {
               <Settings
                 size={18}
                 strokeWidth={isActive ? 2.5 : 2}
-                className={isActive ? 'text-[#0F6E56]' : 'text-white/70 group-hover:text-white'}
+                className={isActive ? 'text-[#A52834]' : 'text-white/70 group-hover:text-white'}
               />
               <span>Settings</span>
             </>

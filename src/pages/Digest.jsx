@@ -28,9 +28,9 @@ function formatDate(dateStr) {
   })
 }
 
-function SectionHeader({ icon: Icon, title, count, color = '#0F6E56' }) {
+function SectionHeader({ icon: Icon, title, count, color = '#A52834' }) {
   return (
-    <div className="flex items-center gap-3 mb-5 pb-3 border-b-2 border-[#0F6E56]">
+    <div className="flex items-center gap-3 mb-5 pb-3 border-b-2 border-[#A52834]">
       <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${color}15` }}>
         <Icon size={16} style={{ color }} />
       </div>
@@ -58,7 +58,7 @@ function DigestIntelItem({ item }) {
         )}
       </div>
       <p className="text-sm font-semibold text-[#1E293B] leading-snug mb-1.5">{item.headline}</p>
-      <div className="border-l-2 border-[#0F6E56] pl-2.5 mb-1.5">
+      <div className="border-l-2 border-[#A52834] pl-2.5 mb-1.5">
         <p className="text-xs italic text-[#475569] leading-relaxed">{item.soWhat}</p>
       </div>
       <p className="text-xs text-[#94A3B8]">{item.source} · {formatDate(item.publishedDate)}</p>
@@ -97,7 +97,7 @@ function DigestLeadershipItem({ item }) {
         </span>
       </div>
       <p className="text-sm font-semibold text-[#1E293B] leading-snug mb-1.5">{item.headline}</p>
-      <div className="border-l-2 border-[#0F6E56] pl-2.5 mb-1.5">
+      <div className="border-l-2 border-[#A52834] pl-2.5 mb-1.5">
         <p className="text-xs italic text-[#475569]">{item.soWhat}</p>
       </div>
       <p className="text-xs text-[#94A3B8]">{item.source} · {formatDate(item.publishedDate)}</p>
@@ -119,7 +119,7 @@ function DigestRegulatoryItem({ item }) {
         <span className="text-xs font-medium px-2 py-0.5 rounded-md bg-[#FEF3C7] text-[#D97706]">CON Filing</span>
       </div>
       <p className="text-sm font-semibold text-[#1E293B] leading-snug mb-1.5">{item.headline}</p>
-      <div className="border-l-2 border-[#0F6E56] pl-2.5 mb-1.5">
+      <div className="border-l-2 border-[#A52834] pl-2.5 mb-1.5">
         <p className="text-xs italic text-[#475569]">{item.soWhat}</p>
       </div>
       <p className="text-xs text-[#94A3B8]">{item.source} · {formatDate(item.publishedDate)}</p>
@@ -154,7 +154,7 @@ export default function Digest() {
       {/* Digest document */}
       <div ref={printRef} className="bg-white rounded-xl border border-[#E2E8F0] shadow-sm overflow-hidden print:shadow-none print:border-0">
         {/* Digest header */}
-        <div className="px-8 py-6 border-b border-[#E2E8F0]" style={{ backgroundColor: '#0F6E56' }}>
+        <div className="px-8 py-6 border-b border-[#E2E8F0]" style={{ backgroundColor: '#A52834' }}>
           <div className="flex items-start justify-between">
             <div>
               <p className="text-white/70 text-xs font-semibold tracking-widest uppercase mb-1">Stamford Health</p>
@@ -171,7 +171,7 @@ export default function Digest() {
         {/* TOC strip */}
         <div className="flex items-center gap-6 px-8 py-3 bg-[#F8FAFC] border-b border-[#E2E8F0] text-xs text-[#475569]">
           <span className="flex items-center gap-1.5 font-medium">
-            <Activity size={12} className="text-[#0F6E56]" /> Market Moves ({MARKET_MOVES.length})
+            <Activity size={12} className="text-[#A52834]" /> Market Moves ({MARKET_MOVES.length})
           </span>
           <span className="text-[#CBD5E1]">·</span>
           <span className="flex items-center gap-1.5 font-medium">
@@ -189,7 +189,7 @@ export default function Digest() {
 
         {/* Editor's Note */}
         <div className="px-8 py-5 border-b border-[#F1F5F9] bg-[#FAFFFE]">
-          <p className="text-xs font-semibold text-[#0F6E56] uppercase tracking-wide mb-2">Editor's Note</p>
+          <p className="text-xs font-semibold text-[#A52834] uppercase tracking-wide mb-2">Editor's Note</p>
           <p className="text-sm text-[#475569] leading-relaxed">
             This week's top story is Northwell Health's accelerating CT market entry — first employer contract
             (Indeed.com, 2,400 Stamford employees), Greenwich hub scheduled for Q4 2026, and three urgent care
@@ -207,7 +207,7 @@ export default function Digest() {
             {MARKET_MOVES.map(item => <DigestIntelItem key={item.id} item={item} />)}
             <Link
               to="/intelligence"
-              className="print:hidden inline-flex items-center gap-1.5 mt-3 text-xs font-medium text-[#0F6E56] hover:underline"
+              className="print:hidden inline-flex items-center gap-1.5 mt-3 text-xs font-medium text-[#A52834] hover:underline"
             >
               View full intelligence feed <ArrowRight size={12} />
             </Link>
@@ -219,7 +219,7 @@ export default function Digest() {
             {INNOVATION_SPOTLIGHT.map(item => <DigestInnovationItem key={item.id} item={item} />)}
             <Link
               to="/innovation"
-              className="print:hidden inline-flex items-center gap-1.5 mt-3 text-xs font-medium text-[#0F6E56] hover:underline"
+              className="print:hidden inline-flex items-center gap-1.5 mt-3 text-xs font-medium text-[#A52834] hover:underline"
             >
               View full innovation feed <ArrowRight size={12} />
             </Link>

@@ -56,7 +56,7 @@ function Select({ label, value, onChange, options }) {
         <select
           value={value}
           onChange={e => onChange(e.target.value)}
-          className="w-full pl-3 pr-8 py-2 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] appearance-none bg-white focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56]"
+          className="w-full pl-3 pr-8 py-2 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] appearance-none bg-white focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834]"
         >
           {options.map(o => (
             <option key={o.value ?? o} value={o.value ?? o}>{o.label ?? o}</option>
@@ -102,7 +102,7 @@ function AddSignalTab() {
           value={form.headline}
           onChange={e => set('headline', e.target.value)}
           placeholder="What did they do? Be specific."
-          className="w-full px-3 py-2 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56]"
+          className="w-full px-3 py-2 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834]"
         />
       </div>
 
@@ -116,7 +116,7 @@ function AddSignalTab() {
           value={form.soWhat}
           onChange={e => set('soWhat', e.target.value)}
           placeholder="Why does this matter to Stamford Health? One to two sentences."
-          className="w-full px-3 py-2 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] placeholder-[#94A3B8] resize-none focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56]"
+          className="w-full px-3 py-2 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] placeholder-[#94A3B8] resize-none focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834]"
         />
       </div>
 
@@ -133,7 +133,7 @@ function AddSignalTab() {
             type="date"
             value={form.publishedDate}
             onChange={e => set('publishedDate', e.target.value)}
-            className="w-full px-3 py-2 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56]"
+            className="w-full px-3 py-2 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834]"
           />
         </div>
       </div>
@@ -145,7 +145,7 @@ function AddSignalTab() {
           value={form.source}
           onChange={e => set('source', e.target.value)}
           placeholder="e.g. Hartford Business Journal, Press Release"
-          className="w-full px-3 py-2 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56]"
+          className="w-full px-3 py-2 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834]"
         />
       </div>
 
@@ -158,7 +158,7 @@ function AddSignalTab() {
 
       <button
         type="submit"
-        className="w-full flex items-center justify-center gap-2 py-2.5 bg-[#0F6E56] text-white text-sm font-semibold rounded-lg hover:bg-[#0D5E49] transition-colors"
+        className="w-full flex items-center justify-center gap-2 py-2.5 bg-[#A52834] text-white text-sm font-semibold rounded-lg hover:bg-[#8B2029] transition-colors"
       >
         <Plus size={15} /> Add to Dashboard
       </button>
@@ -196,7 +196,7 @@ function StatsTab() {
                 max="999"
                 value={stat.value}
                 onChange={e => updateStat(stat.label, e.target.value)}
-                className="w-20 px-2 py-1.5 text-sm text-center border border-[#E2E8F0] rounded-lg font-bold text-[#1E293B] focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56]"
+                className="w-20 px-2 py-1.5 text-sm text-center border border-[#E2E8F0] rounded-lg font-bold text-[#1E293B] focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834]"
               />
             </div>
           ))}
@@ -211,7 +211,7 @@ function StatsTab() {
           rows={5}
           value={situation}
           onChange={e => setSituation(e.target.value)}
-          className="w-full px-3 py-2 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] resize-none focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56]"
+          className="w-full px-3 py-2 text-sm border border-[#E2E8F0] rounded-lg text-[#1E293B] resize-none focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834]"
         />
         <div className="flex items-center justify-between mt-2">
           {saved ? (
@@ -223,7 +223,7 @@ function StatsTab() {
           )}
           <button
             onClick={handleSave}
-            className="px-3 py-1.5 bg-[#0F6E56] text-white text-xs font-semibold rounded-lg hover:bg-[#0D5E49] transition-colors"
+            className="px-3 py-1.5 bg-[#A52834] text-white text-xs font-semibold rounded-lg hover:bg-[#8B2029] transition-colors"
           >
             Save
           </button>
@@ -337,7 +337,7 @@ export default function ContentPanel({ onClose }) {
               onClick={() => setActiveTab(tab.id)}
               className={`flex-1 py-2.5 text-xs font-semibold transition-colors border-b-2 ${
                 activeTab === tab.id
-                  ? 'border-[#0F6E56] text-[#0F6E56]'
+                  ? 'border-[#A52834] text-[#A52834]'
                   : 'border-transparent text-[#94A3B8] hover:text-[#475569]'
               }`}
             >

@@ -35,7 +35,7 @@ function NotificationPanel({ onClose }) {
           </span>
         </div>
         <div className="flex items-center gap-3">
-          <button onClick={() => setRead(new Set(recent.map(a => a.id)))} className="text-xs text-[#0F6E56] hover:underline font-medium">
+          <button onClick={() => setRead(new Set(recent.map(a => a.id)))} className="text-xs text-[#A52834] hover:underline font-medium">
             Mark all read
           </button>
           <button onClick={onClose} className="text-[#94A3B8] hover:text-[#475569]"><X size={15} /></button>
@@ -59,7 +59,7 @@ function NotificationPanel({ onClose }) {
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-0.5">
                   <span className="text-xs font-semibold" style={{ color: competitor?.color }}>{competitor?.shortName}</span>
-                  {!isRead && <span className="w-1.5 h-1.5 rounded-full bg-[#0F6E56]" />}
+                  {!isRead && <span className="w-1.5 h-1.5 rounded-full bg-[#A52834]" />}
                   <span className="text-xs text-[#94A3B8] ml-auto">{formatRelative(alert.publishedDate)}</span>
                 </div>
                 <p className="text-xs text-[#1E293B] leading-snug line-clamp-2">{alert.headline}</p>
@@ -69,7 +69,7 @@ function NotificationPanel({ onClose }) {
         })}
       </div>
       <div className="px-4 py-3 border-t border-[#F1F5F9] bg-[#F8FAFC]">
-        <Link to="/intelligence" onClick={onClose} className="text-xs font-medium text-[#0F6E56] hover:underline">
+        <Link to="/intelligence" onClick={onClose} className="text-xs font-medium text-[#A52834] hover:underline">
           View all intelligence →
         </Link>
       </div>
@@ -110,7 +110,7 @@ function useOutsideClick(ref, handler) {
 function UserAvatar({ user }) {
   const initials = user?.name ? user.name.split(' ').filter(Boolean).slice(0, 2).map(n => n[0]).join('') : 'U'
   return (
-    <div className="w-8 h-8 rounded-full bg-[#0F6E56] flex items-center justify-center">
+    <div className="w-8 h-8 rounded-full bg-[#A52834] flex items-center justify-center">
       <span className="text-white text-xs font-semibold">{initials}</span>
     </div>
   )
@@ -151,7 +151,7 @@ export default function TopBar() {
           {/* Update Dashboard button */}
           <button
             onClick={() => setShowContentPanel(true)}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-[#0F6E56] text-white text-xs font-semibold rounded-lg hover:bg-[#0D5E49] transition-colors shadow-sm"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-[#A52834] text-white text-xs font-semibold rounded-lg hover:bg-[#8B2029] transition-colors shadow-sm"
           >
             <PenLine size={13} />
             Update Dashboard

@@ -33,7 +33,7 @@ function StatsBar({ stats, loading }) {
     { label: 'Total Signals', value: stats?.total ?? '—', icon: FileText, color: 'text-slate-600', bg: 'bg-slate-100' },
     { label: 'Published', value: stats?.published ?? '—', icon: Globe, color: 'text-emerald-600', bg: 'bg-emerald-100' },
     { label: 'Draft', value: stats?.draft ?? '—', icon: Archive, color: 'text-amber-600', bg: 'bg-amber-100' },
-    { label: 'Added This Week', value: stats?.addedThisWeek ?? '—', icon: CalendarPlus, color: 'text-[#0F6E56]', bg: 'bg-teal-100' },
+    { label: 'Added This Week', value: stats?.addedThisWeek ?? '—', icon: CalendarPlus, color: 'text-[#A52834]', bg: 'bg-teal-100' },
   ]
   return (
     <div className="grid grid-cols-4 gap-4 mb-6">
@@ -82,7 +82,7 @@ function AddSignalForm({ onSuccess, onCancel }) {
     }
   }
 
-  const inputCls = 'w-full border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/30 focus:border-[#0F6E56]'
+  const inputCls = 'w-full border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#A52834]/30 focus:border-[#A52834]'
   const labelCls = 'block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1'
 
   return (
@@ -163,7 +163,7 @@ function AddSignalForm({ onSuccess, onCancel }) {
       <div className="flex items-center gap-3">
         <button
           type="submit" disabled={saving}
-          className="flex items-center gap-2 px-4 py-2 bg-[#0F6E56] text-white text-sm font-semibold rounded-lg hover:bg-[#0a5843] disabled:opacity-60 transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-[#A52834] text-white text-sm font-semibold rounded-lg hover:bg-[#0a5843] disabled:opacity-60 transition-colors"
         >
           {saving ? <Loader2 size={14} className="animate-spin" /> : <CheckCircle2 size={14} />}
           {saving ? 'Saving…' : form.status === 'published' ? 'Publish Signal' : 'Save Draft'}
@@ -313,7 +313,7 @@ export default function AdminPortal() {
           </button>
           <button
             onClick={() => setShowForm(v => !v)}
-            className="flex items-center gap-2 px-4 py-2 bg-[#0F6E56] text-white text-sm font-semibold rounded-lg hover:bg-[#0a5843] transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-[#A52834] text-white text-sm font-semibold rounded-lg hover:bg-[#0a5843] transition-colors"
           >
             <Plus size={15} />
             Add New Signal
@@ -356,7 +356,7 @@ export default function AdminPortal() {
               onClick={() => setFilterStatus(s)}
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors capitalize ${
                 filterStatus === s
-                  ? 'bg-[#0F6E56] text-white'
+                  ? 'bg-[#A52834] text-white'
                   : 'text-slate-500 hover:bg-slate-100'
               }`}
             >

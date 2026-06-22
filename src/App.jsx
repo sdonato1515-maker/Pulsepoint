@@ -8,7 +8,6 @@ import Dashboard from './pages/Dashboard.jsx'
 import IntelligenceFeed from './pages/IntelligenceFeed.jsx'
 import MarketPulse from './pages/MarketPulse.jsx'
 import InnovationFeed from './pages/InnovationFeed.jsx'
-import PeerNetwork from './pages/PeerNetwork.jsx'
 import Digest from './pages/Digest.jsx'
 import Settings from './pages/Settings.jsx'
 import AdminPortal from './pages/AdminPortal.jsx'
@@ -32,7 +31,6 @@ function AppRoutes() {
         <Route path="/intelligence" element={<IntelligenceFeed />} />
         <Route path="/market-pulse" element={<MarketPulse />} />
         <Route path="/innovation" element={<InnovationFeed />} />
-        <Route path="/peer-network" element={<PeerNetwork />} />
         <Route path="/digest" element={<Digest />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/admin" element={<AdminPortal />} />

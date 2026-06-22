@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react'
-import { ChevronDown, Users } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { ChevronDown, ExternalLink } from 'lucide-react'
 import { INNOVATION_ITEMS } from '../data/seed.js'
 
 const INITIATIVE_TYPE_LABELS = {
@@ -23,6 +22,7 @@ const INITIATIVE_TYPE_COLORS = {
 
 const SERVICE_LINES = ['All Service Lines', 'Oncology', 'Cardiology', 'Executive Health', 'Behavioral Health', 'Orthopedics']
 const INITIATIVE_TYPES = ['All Types', 'Technology', 'Care Model', 'New Service Line', 'Care Integration', 'Employer Partnership', 'Partnership Model']
+const SYSTEMS = ['All Systems', ...Array.from(new Set(INNOVATION_ITEMS.map(i => i.systemName))).sort()]
 
 function formatDate(dateStr) {
   if (!dateStr) return ''
@@ -76,14 +76,19 @@ function InnovationCard({ item }) {
         ))}
       </div>
 
-      <div className="mt-auto pt-3 border-t border-[#F1F5F9]">
-        <Link
-          to="/peer-network"
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-[#0F6E56] hover:text-[#0D5E49] transition-colors"
-        >
-          <Users size={14} />
-          Connect with a peer doing this
-        </Link>
+      <div className="mt-auto pt-3 border-t border-[#F1F5F9] flex items-center justify-between">
+        <span className="text-xs text-[#94A3B8]">{item.systemName} · {formatDate(item.publishedDate)}</span>
+        {item.sourceUrl && (
+          <a
+            href={item.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-xs font-medium text-[#A52834] hover:text-[#8B2029] transition-colors"
+          >
+            Read article
+            <ExternalLink size={11} strokeWidth={2} />
+          </a>
+        )}
       </div>
     </div>
   )
@@ -92,6 +97,7 @@ function InnovationCard({ item }) {
 export default function InnovationFeed() {
   const [selectedServiceLine, setSelectedServiceLine] = useState('All Service Lines')
   const [selectedType, setSelectedType] = useState('All Types')
+  const [selectedSystem, setSelectedSystem] = useState('All Systems')
 
   const filtered = useMemo(() => {
     return INNOVATION_ITEMS.filter(item => {
@@ -100,9 +106,10 @@ export default function InnovationFeed() {
         const label = INITIATIVE_TYPE_LABELS[item.initiativeType] || item.initiativeType
         if (label !== selectedType) return false
       }
+      if (selectedSystem !== 'All Systems' && item.systemName !== selectedSystem) return false
       return true
     })
-  }, [selectedServiceLine, selectedType])
+  }, [selectedServiceLine, selectedType, selectedSystem])
 
   return (
     <div className="space-y-6">
@@ -119,7 +126,7 @@ export default function InnovationFeed() {
           <select
             value={selectedServiceLine}
             onChange={e => setSelectedServiceLine(e.target.value)}
-            className="pl-3 pr-8 py-2 text-sm bg-white border border-[#E2E8F0] rounded-lg text-[#475569] appearance-none focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56] cursor-pointer shadow-sm"
+            className="pl-3 pr-8 py-2 text-sm bg-white border border-[#E2E8F0] rounded-lg text-[#475569] appearance-none focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834] cursor-pointer shadow-sm"
           >
             {SERVICE_LINES.map(sl => <option key={sl}>{sl}</option>)}
           </select>
@@ -130,9 +137,20 @@ export default function InnovationFeed() {
           <select
             value={selectedType}
             onChange={e => setSelectedType(e.target.value)}
-            className="pl-3 pr-8 py-2 text-sm bg-white border border-[#E2E8F0] rounded-lg text-[#475569] appearance-none focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56] cursor-pointer shadow-sm"
+            className="pl-3 pr-8 py-2 text-sm bg-white border border-[#E2E8F0] rounded-lg text-[#475569] appearance-none focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834] cursor-pointer shadow-sm"
           >
             {INITIATIVE_TYPES.map(t => <option key={t}>{t}</option>)}
+          </select>
+          <ChevronDown size={12} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#94A3B8] pointer-events-none" />
+        </div>
+
+        <div className="relative">
+          <select
+            value={selectedSystem}
+            onChange={e => setSelectedSystem(e.target.value)}
+            className="pl-3 pr-8 py-2 text-sm bg-white border border-[#E2E8F0] rounded-lg text-[#475569] appearance-none focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834] cursor-pointer shadow-sm"
+          >
+            {SYSTEMS.map(s => <option key={s}>{s}</option>)}
           </select>
           <ChevronDown size={12} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#94A3B8] pointer-events-none" />
         </div>

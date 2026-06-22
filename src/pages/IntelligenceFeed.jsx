@@ -82,7 +82,7 @@ function IntelItem({ item }) {
         </span>
       </div>
       <p className="text-sm font-semibold text-[#1E293B] leading-snug mb-3">{item.headline}</p>
-      <div className="border-l-2 border-[#0F6E56] pl-3 mb-3">
+      <div className="border-l-2 border-[#A52834] pl-3 mb-3">
         <p className="text-sm italic text-[#475569] leading-relaxed">{item.soWhat}</p>
       </div>
       <SourceTag source={item.source} date={item.publishedDate} url={item.sourceUrl} />
@@ -225,7 +225,7 @@ function PayerTab() {
 
 function RatingBar({ value }) {
   const pct = (value / 5) * 100
-  const color = value >= 4.5 ? '#0F6E56' : value >= 4.0 ? '#D97706' : '#DC2626'
+  const color = value >= 4.5 ? '#A52834' : value >= 4.0 ? '#D97706' : '#DC2626'
   return (
     <div className="flex items-center gap-3">
       <div className="flex-1 h-2 rounded-full bg-[#F1F5F9] overflow-hidden">
@@ -300,7 +300,7 @@ function SentimentCard({ item }) {
         </div>
       </div>
 
-      <div className="border-l-2 border-[#0F6E56] pl-3">
+      <div className="border-l-2 border-[#A52834] pl-3">
         <p className="text-sm italic text-[#475569] leading-relaxed">{item.soWhat}</p>
       </div>
     </div>
@@ -368,7 +368,7 @@ function AllSignalsTab() {
             placeholder="Search headlines, implications, service lines…"
             value={search}
             onChange={e => setSearch(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 text-sm bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg text-[#1E293B] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56]"
+            className="w-full pl-9 pr-4 py-2 text-sm bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg text-[#1E293B] placeholder-[#94A3B8] focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834]"
           />
         </div>
         <div className="flex items-center gap-2 flex-wrap">
@@ -376,8 +376,8 @@ function AllSignalsTab() {
             onClick={() => setSelectedCompetitor('all')}
             className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
               selectedCompetitor === 'all'
-                ? 'bg-[#0F6E56] text-white'
-                : 'bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0] hover:bg-[#E6F4F1]'
+                ? 'bg-[#A52834] text-white'
+                : 'bg-[#F8FAFC] text-[#475569] border border-[#E2E8F0] hover:bg-[#F9E8EA]'
             }`}
           >
             All Competitors
@@ -401,7 +401,7 @@ function AllSignalsTab() {
             <select
               value={selectedServiceLine}
               onChange={e => setSelectedServiceLine(e.target.value)}
-              className="pl-3 pr-7 py-1.5 text-xs bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg text-[#475569] appearance-none focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56] cursor-pointer"
+              className="pl-3 pr-7 py-1.5 text-xs bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg text-[#475569] appearance-none focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834] cursor-pointer"
             >
               {SERVICE_LINES.map(sl => <option key={sl}>{sl}</option>)}
             </select>
@@ -411,7 +411,7 @@ function AllSignalsTab() {
             <select
               value={selectedType}
               onChange={e => setSelectedType(e.target.value)}
-              className="pl-3 pr-7 py-1.5 text-xs bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg text-[#475569] appearance-none focus:outline-none focus:ring-2 focus:ring-[#0F6E56]/20 focus:border-[#0F6E56] cursor-pointer"
+              className="pl-3 pr-7 py-1.5 text-xs bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg text-[#475569] appearance-none focus:outline-none focus:ring-2 focus:ring-[#A52834]/20 focus:border-[#A52834] cursor-pointer"
             >
               {ITEM_TYPES.map(t => <option key={t}>{t}</option>)}
             </select>
@@ -437,7 +437,7 @@ function AllSignalsTab() {
             <p className="text-sm text-[#94A3B8]">No items match your filters.</p>
             <button
               onClick={() => { setSearch(''); setSelectedCompetitor('all'); setSelectedServiceLine('All Service Lines'); setSelectedType('All Types') }}
-              className="mt-3 text-sm text-[#0F6E56] hover:underline"
+              className="mt-3 text-sm text-[#A52834] hover:underline"
             >
               Clear filters
             </button>
@@ -482,7 +482,7 @@ export default function IntelligenceFeed() {
             onClick={() => setActiveTab(tab.id)}
             className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
               activeTab === tab.id
-                ? 'bg-[#0F6E56] text-white shadow-sm'
+                ? 'bg-[#A52834] text-white shadow-sm'
                 : 'text-[#475569] hover:bg-[#F8FAFC] hover:text-[#1E293B]'
             }`}
           >
